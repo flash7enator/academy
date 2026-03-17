@@ -2,9 +2,15 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Сторінка в розробці</title>
+    <title>Home</title>
 </head>
 <body>
-    <h1>Сторінка в розробці</h1>
+    <h1>Model Lists</h1>
+
+    <ul>
+        <li><a href="{% url 'teacher_list' %}">Teachers</a></li>
+        <li><a href="{% url 'course_list' %}">Courses</a></li>
+        <li><a href="{% url 'student_list' %}">Students</a></li>
+    </ul>
 </body>
 </html>

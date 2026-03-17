@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+</head>
+<body>
+    <h1>Students</h1>
+
+    {% for student in students %}
+        <p>
+            {{ student.first_name }} {{ student.last_name }} |
+            {{ student.email }} |
+            {{ student.phone }} |
+            {{ student.url_link }} |
+            {{ student.date_of_birth }}
+        </p>
+
+        <p>Courses:</p>
+        <ul>
+            {% for course in student.courses.all %}
+                <li>{{ course.name }}</li>
+            {% empty %}
+                <li>No courses</li>
+            {% endfor %}
+        </ul>
+        <hr>
+    {% empty %}
+        <p>No students found.</p>
+    {% endfor %}
+</body>
+</html>

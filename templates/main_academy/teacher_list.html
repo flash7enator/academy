@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Teachers</title>
+</head>
+<body>
+    <h1>Teachers</h1>
+
+    {% for teacher in teachers %}
+        <p>
+            {{ teacher.first_name }} {{ teacher.last_name }} |
+            {{ teacher.email }} |
+            {{ teacher.phone }} |
+            {{ teacher.date_of_birth }}
+        </p>
+    {% empty %}
+        <p>No teachers found.</p>
+    {% endfor %}
+</body>
+</html>

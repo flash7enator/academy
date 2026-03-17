@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses</title>
+</head>
+<body>
+    <h1>Courses</h1>
+
+    {% for course in courses %}
+        <p>
+            {{ course.name }} |
+            {{ course.description }} |
+            Teacher: {{ course.teacher }} |
+            {{ course.start_date }} - {{ course.end_date }}
+        </p>
+    {% empty %}
+        <p>No courses found.</p>
+    {% endfor %}
+</body>
+</html>
